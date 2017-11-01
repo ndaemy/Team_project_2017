@@ -1,8 +1,14 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #00B7FF; }
+.forp-drawer {
+  border-right: none; }
+  .forp-drawer span.mdl-navigation__link.forp-drawer-subtitle {
+    color: #2196F3;
+    font-size: 14px;
+    font-weight: 600; }
+  .forp-drawer span.mdl-navigation__link.forp-drawer-subtitle:hover {
+    background: transparent; }
+  .forp-drawer .forp-drawer-seperator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0; }
 
 /*# sourceMappingURL=style.css.map */

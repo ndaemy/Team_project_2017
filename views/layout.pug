@@ -1,10 +1,45 @@
 doctype html
 html
   head
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
-    link(rel='stylesheet', href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css')
+    link(rel='stylesheet', href='https://code.getmdl.io/1.3.0/material.blue-indigo.min.css')
     script(defer, src='https://code.getmdl.io/1.3.0/material.min.js')
   body
+    div(class='mdl-layout mdl-js-layout mdl-layout--fixed-header')
+      header(class='mdl-layout__header')
+        div(class='mdl-layout__header-row mdl-layout--large-screen-only')
+          // Title
+          span(class='mdl-layout-title') For P
+          // Add spacer, to align navigation to the right
+          div(class='mdl-layout-spacer')
+          // Navigation
+          nav(class='mdl-navigation')
+            a(href='#' class='mdl-navigation__link') About
+            a(href='#' class='mdl-navigation__link') Contact
+      div(class='forp-drawer mdl-layout__drawer')
+        span(class='mdl-layout-title') For P
+        nav(class='mdl-navigation')
+          span(class='forp-drawer-subtitle mdl-navigation__link') Languages
+          a(href='#' class='mdl-navigation__link') C
+          a(href='#' class='mdl-navigation__link') C++
+          a(href='#' class='mdl-navigation__link') C#
+          a(href='#' class='mdl-navigation__link') Java
+          a(href='#' class='mdl-navigation__link') HTML &amp; CSS
+          a(href='#' class='mdl-navigation__link') JavaScript
+          a(href='#' class='mdl-navigation__link') PHP
+          a(href='#' class='mdl-navigation__link') Ruby
+          a(href='#' class='mdl-navigation__link') Python
+          div(class='forp-drawer-seperator')
+          span(class='forp-drawer-subtitle mdl-navigation__link') Features
+          a(href='#' class='mdl-navigation__link') Education
+          a(href='#' class='mdl-navigation__link') Reference
+          a(href='#' class='mdl-navigation__link') Community
+          a(href='#' class='mdl-navigation__link') Tools
+          a(href='#' class='mdl-navigation__link') Quiz
+          div(class='forp-drawer-seperator')
+          a(href='#' class='mdl-navigation__link') About
+          a(href='#' class='mdl-navigation__link') Contact
     block content

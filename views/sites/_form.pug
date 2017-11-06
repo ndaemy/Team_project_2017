@@ -1,0 +1,15 @@
+.form-group.mdl-textfield.mdl-js-textfield
+  input.mdl-textfield__input(type='text', id='name', name='name', value=site.name)
+  label.mdl-textfield__label(for='name') Site name
+  
+.form-group.mdl-textfield.mdl-js-textfield
+  input.mdl-textfield__input(type='text', id='domain', name='domain', value=site.domain)
+  label.mdl-textfield__label(for='domain') Site domain
+
+.form-group.mdl-textfield.mdl-js-textfield
+  input.mdl-textfield__input(type='text', id='includeLang', name='includeLang', value=site.includeLang ? site.includeLang.join(" ") : "")
+  label.mdl-textfield__label(for='includeLang') Included languages (seperated by spaces)
+
+.form-group.mdl-textfield.mdl-js-textfield
+  input.mdl-textfield__input(type='text', id='language', name='language', value=site.language ? site.language.join(" ") : "")
+  label.mdl-textfield__label(for='language') Language (means human language / seperated by spaces)

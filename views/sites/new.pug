@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  .mdl-grid
+    .mdl-cell--2-col
+    .mdl-cell--8-col
+      h1.main-title Add a new site
+      form(action='/sites', method='POST')
+        include _form
+        | 
+        |
+        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored Send
+    .mdl-cell--2-col

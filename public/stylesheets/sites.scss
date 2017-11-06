@@ -1,0 +1,26 @@
+.main-title {
+  color: #555;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.forp-card-wide {
+  .mdl-card {
+    width: 100%;
+  }
+  .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../images/browser.png') center / cover;
+  }
+  .mdl-card__menu {
+    color: #fff;
+  }
+}

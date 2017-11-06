@@ -1,0 +1,57 @@
+.forp-header {
+  overflow: visible;
+}
+
+.forp-drawer {
+  border-right: 0;
+
+  span.mdl-navigation__link.forp-drawer-subtitle {
+    color: #2196F3;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  span.mdl-navigation__link.forp-drawer-subtitle:hover {
+    background: transparent;
+  }
+
+  .forp-drawer-seperator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+}
+
+.forp-do-something-section {
+  position: relative;
+  width: auto;
+  height: 720px;
+  background: url('../images/main-background.jpg') center 30% no-repeat;
+  background-color: #f3f3f3;
+  background-size: cover;
+  @media screen and (max-width: 900px) {
+    height: 350px;
+  }
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #555;
+  font-weight: 500;
+}
+
+.forp-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.forp-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.forp-footer {
+  position: relative;
+  margin-top: 3em;
+}

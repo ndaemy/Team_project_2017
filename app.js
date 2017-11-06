@@ -5,15 +5,26 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var methodOverride = require('method-override');
+var mongoose   = require('mongoose');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var sites = require('./routes/sites');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+// mongodb connect
+mongoose.Promise = global.Promise; // ES6 Native Promise를 mongoose에서 사용한다.
+const connStr = 'mongodb://localhost/forpdb';
+mongoose.connect(connStr, {useMongoClient: true });
+mongoose.connection.on('error', console.error);
+
+// _method를 통해서 method를 변경할 수 있도록 함. PUT이나 DELETE를 사용할 수 있도록.
+app.use(methodOverride('_method', {methods: ['POST', 'GET']}));
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -30,7 +41,7 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/sites', sites);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

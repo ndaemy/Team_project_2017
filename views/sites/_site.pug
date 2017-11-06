@@ -1,10 +1,12 @@
-.forp-card-wide.mdl-card.mdl-shadow--2dp
+.mdl-cell.mdl-card.mdl-shadow--4dp.forp-site-card
+  .mdl-card__media
+    img.site-image(src='images/browser.png')
   .mdl-card__title
     h2.mdl-card__title-text= site.name
   .mdl-card__supporting-text
     = site.domain
   .mdl-card__actions.mdl-card--border
-    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect More information
+    a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href="#") More information
   .mdl-card__menu
     button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
       i.material-icons share

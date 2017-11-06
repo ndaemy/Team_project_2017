@@ -11,14 +11,13 @@
   margin-bottom: 1rem;
 }
 
-.forp-card-wide {
-  .mdl-card {
+.forp-site-card {
+  .site-image {
     width: 100%;
+    height: auto;
   }
   .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../images/browser.png') center / cover;
+    padding-bottom: 0;
   }
   .mdl-card__menu {
     color: #fff;

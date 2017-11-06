@@ -1,23 +1,16 @@
 extends ../layout
 
 block content
-  .mdl-grid
-    .mdl-cell.mdl-cell--2-col
-    .mdl-cell.mdl-cell--8-col
-      h1.main-title Sites for programming
-      if sites.total > 0
-        .mdl-typography--text-right Total #{sites.total} site(s)
-    .mdl-cell.mdl-cell--2-col
-  
-  .mdl-grid
-    .mdl-cell.mdl-cell--2-col
-    .mdl-cell.mdl-cell--8-col
+  .mdl-grid.forp-max-width
+    .mdl-grid
+      .mdl-cell--12-col
+        h1.main-title Sites for programming
+        if sites.total > 0
+          .mdl-typography--text-right Total #{sites.total} site(s)
+    
       if sites.total <= 0
         span.mdl-chip
           span.mdl-chip__text No sites available yet
       else
-        .mdl-grid
-          each site in sites.docs
-            .mdl-cell.mdl-cell--4-col
-              include _site
-    .mdl-cell.mdl-cell--2-col
+        each site in sites.docs
+          include _site

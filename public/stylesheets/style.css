@@ -43,6 +43,14 @@
   position: relative;
   margin-top: 3em; }
 
+.article-image {
+  width: 100%;
+  height: auto; }
+
+.forp-max-width {
+  max-width: 900px;
+  margin: auto; }
+
 .main-title {
   color: #555;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -54,15 +62,14 @@
   display: block;
   margin-bottom: 1rem; }
 
-.forp-card-wide .mdl-card {
-  width: 100%; }
+.forp-site-card .site-image {
+  width: 100%;
+  height: auto; }
 
-.forp-card-wide .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url("../images/browser.png") center/cover; }
+.forp-site-card .mdl-card__title {
+  padding-bottom: 0; }
 
-.forp-card-wide .mdl-card__menu {
+.forp-site-card .mdl-card__menu {
   color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,3 +23,10 @@
     color: #fff;
   }
 }
+
+.forp-fixed-right-bottom {
+  position: fixed;
+  bottom: 3rem;
+  right: 6rem;
+  z-index: 300;
+}

@@ -56,10 +56,9 @@
 .forp-footer {
   position: relative;
   margin-top: 3em; }
-
-@media screen and (max-width: 900px) {
-  .forp-logo {
-    font-size: .8em; } }
+  @media screen and (max-width: 900px) {
+    .forp-footer {
+      font-size: .8em; } }
 
 .article-image {
   width: 100%;

@@ -49,16 +49,29 @@
 .forp-slogan {
   font-size: 60px;
   padding-top: 160px;
+  @media screen and (max-width: 900px) {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
 }
 
 .forp-sub-slogan {
   font-size: 21px;
   padding-top: 24px;
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
 }
 
 .forp-footer {
   position: relative;
   margin-top: 3em;
+  @media screen and (max-width: 900px) {
+    font-size: .8em;
+  }
 }
 
 .article-image {

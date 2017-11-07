@@ -9,6 +9,12 @@ router.get('/', async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 10;
 
   var query = {};
+  const lang = req.query.lang;
+
+  if (lang) {
+    query = {'includeLang': lang};
+  }
+
   const sites = await Site.paginate(query, {
     sort: {name: 1},
     page: page, limit: limit
@@ -18,10 +24,6 @@ router.get('/', async (req, res, next) => {
 
 router.get('/new', (req, res, next) => {
   res.render('sites/new', {site: {}});
-});
-
-router.get('/:includeLang', (req, res, next) => {
-  res.render('sites/')
 });
 
 router.post('/', async (req, res, next) => {

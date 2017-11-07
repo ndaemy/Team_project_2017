@@ -38,7 +38,7 @@ router.post('/', async (req, res, next) => {
       console.dir(site);
     }
   });
-  res.redirect('/sites');
+  res.redirect('../sites');
 });
 
 module.exports = router;

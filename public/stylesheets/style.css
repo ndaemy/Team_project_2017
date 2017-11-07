@@ -1,6 +1,10 @@
 .forp-header {
   overflow: visible; }
 
+.forp-layout-title {
+  color: #fff;
+  text-decoration: none; }
+
 .forp-drawer {
   border-right: 0; }
   .forp-drawer span.mdl-navigation__link.forp-drawer-subtitle {

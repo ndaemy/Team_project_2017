@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../models/user')
+const User = require('../models/user');
 const router = express.Router();
 const catchErrors = require('../lib/async-error');
 
@@ -15,7 +15,7 @@ function needAuth(req, res, next){
 function validateForm(form, options){
   var email = form.email || "";
   var name = form.name || "";
-  mail = email.trim();
+  email = email.trim();
   name = name.trim();
 
   if(!email){
@@ -45,7 +45,7 @@ function validateForm(form, options){
 router.get('/', needAuth, catchErrors(async (req, res, next) => {
   const users = await User.find({});
   res.render('/', {users: users});
-}))
+}));
 
 router.get('/signup', (req, res, next) => {
   res.render('users/signup', {messages: req.flash()});

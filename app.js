@@ -5,11 +5,17 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var flash = require('connect-flash');
+var session = require('express-session');
 var methodOverride = require('method-override');
 var mongoose   = require('mongoose');
+var passport = require('passport');
 
 var index = require('./routes/index');
 var sites = require('./routes/sites');
+var users = require('./routes/users');
+
+var passportConfig = require('./lib/passport-config');
 
 var app = express();
 
@@ -38,10 +44,31 @@ app.use(sassMiddleware({
   indentedSyntax: false, // true = .sass and false = .scss
   sourceMap: true
 }));
+
+// session을 사용할 수 있도록.
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: 'long-long-long-secret-string-1313513tefgwdsvbjkvasd'
+}));
+
+app.use(flash()); // flash message를 사용할 수 있도록
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passportConfig(passport);
+
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;  // passport는 req.user로 user정보 전달
+  res.locals.flashMessages = req.flash();
+  next();
+});
 
 app.use('/', index);
 app.use('/sites', sites);
+app.user('/users', users);
+require('./routes/auth')(app, passport);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -10,9 +10,13 @@ router.get('/', async (req, res, next) => {
 
   var query = {};
   const lang = req.query.lang;
+  const feat = req.query.feat;
 
   if (lang) {
     query = {'includeLang': lang};
+  }
+  if (feat) {
+    query = {'feature': feat};
   }
 
   const sites = await Site.paginate(query, {

@@ -7,6 +7,7 @@ var schema = new Schema({
   domain: {type: String, trim: true, required: true},
   includeLang: {type: [String], required: true},
   language: {type: [String], required: true},
+  feature: {type: [String], required: true},
   created: {type: Date, default: Date.now}
 });
 

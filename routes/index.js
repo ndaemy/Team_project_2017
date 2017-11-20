@@ -10,6 +10,10 @@ router.get('/about', (req, res, next) => {
   res.render('about');
 });
 
+router.get('/help', (req, res, next) => {
+  res.render('help');
+});
+
 router.get('/contact', (req, res, next) => {
   res.render('contact');
 });

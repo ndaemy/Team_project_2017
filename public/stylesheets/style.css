@@ -68,6 +68,10 @@
   max-width: 900px;
   margin: auto; }
 
+.not-deco {
+  text-decoration: none;
+  color: inherit; }
+
 .main-title {
   color: #555;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;

@@ -34,8 +34,9 @@ router.post('/', async (req, res, next) => {
   var site = new Site({
     name: req.body.name,
     domain: req.body.domain,
-    includeLang: req.body.includeLang.split(" ").map(e => e.trim()),
-    language: req.body.language.split(" ").map(e => e.trim()),
+    includeLang: req.body.includeLang.toLowerCase().split(" ").map(e => e.trim()),
+    language: req.body.language.toLowerCase().split(" ").map(e => e.trim()),
+    feature: req.body.feature.toLowerCase().split(" ").map(e => e.trim())
   });
   await site.save(function(err, site) {
     if (err) {

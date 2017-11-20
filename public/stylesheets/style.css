@@ -14,26 +14,26 @@
   .forp-drawer span.mdl-navigation__link.forp-drawer-subtitle:hover {
     background: transparent; }
   .forp-drawer .forp-drawer-seperator {
-    height: 1px;
     background-color: #dcdcdc;
+    height: 1px;
     margin: 8px 0; }
 
 .forp-do-something-section {
-  position: relative;
-  width: auto;
-  height: 720px;
   background: url("../images/main-background.jpg") center 30% no-repeat;
   background-color: #f3f3f3;
-  background-size: cover; }
+  background-size: cover;
+  height: 720px;
+  position: relative;
+  width: auto; }
   @media screen and (max-width: 900px) {
     .forp-do-something-section {
       height: 350px; } }
 
 .logo-font {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1;
   color: #555;
-  font-weight: 500; }
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+  line-height: 1; }
 
 .forp-slogan {
   font-size: 60px;
@@ -54,23 +54,26 @@
       padding-top: 8px; } }
 
 .forp-footer {
-  position: relative;
-  margin-top: 3em; }
+  margin-top: 3em;
+  position: relative; }
   @media screen and (max-width: 900px) {
     .forp-footer {
       font-size: .8em; } }
 
 .article-image {
-  width: 100%;
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 .forp-max-width {
-  max-width: 900px;
-  margin: auto; }
+  margin: auto;
+  max-width: 900px; }
 
 .not-deco {
-  text-decoration: none;
-  color: inherit; }
+  color: inherit;
+  text-decoration: none; }
+
+.forp-large-textfield {
+  width: 30em; }
 
 .main-title {
   color: #555;

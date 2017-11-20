@@ -87,8 +87,8 @@
   margin-bottom: 1rem; }
 
 .forp-site-card .site-image {
-  width: 100%;
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 .forp-site-card .mdl-card__title {
   padding-bottom: 0; }
@@ -97,9 +97,13 @@
   color: #fff; }
 
 .forp-fixed-right-bottom {
-  position: fixed;
   bottom: 3rem;
+  position: fixed;
   right: 6rem;
   z-index: 300; }
+
+.forp-detail-subtitle {
+  margin-bottom: 8px;
+  margin-top: 12px; }
 
 /*# sourceMappingURL=style.css.map */

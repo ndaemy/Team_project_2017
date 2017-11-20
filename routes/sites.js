@@ -30,6 +30,11 @@ router.get('/new', (req, res, next) => {
   res.render('sites/new', {site: {}});
 });
 
+router.get('/:id', async (req, res, next) => {
+  const site = await Site.findById(req.params.id);
+  res.render('sites/detail', {site: site});
+});
+
 router.post('/', async (req, res, next) => {
   var site = new Site({
     name: req.body.name,

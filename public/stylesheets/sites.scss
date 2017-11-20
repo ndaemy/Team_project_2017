@@ -13,20 +13,27 @@
 
 .forp-site-card {
   .site-image {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
+
   .mdl-card__title {
     padding-bottom: 0;
   }
+
   .mdl-card__menu {
     color: #fff;
   }
 }
 
 .forp-fixed-right-bottom {
-  position: fixed;
   bottom: 3rem;
+  position: fixed;
   right: 6rem;
   z-index: 300;
+}
+
+.forp-detail-subtitle {
+  margin-bottom: 8px;
+  margin-top: 12px;
 }

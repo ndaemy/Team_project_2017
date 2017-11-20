@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .mdl-grid.forp-max-width
+    .mdl-cell.mdl-cell--12-col.mdl-card.mdl-shadow--4dp
+      .mdl-card__title
+        h2.mdl-card__title-text= site.name
+      .mdl-card__media
+        img.article-image(src='../images/contact-image.jpg')
+      .mdl-card__supporting-text
+        h4.forp-detail-subtitle Domain
+        p= site.domain
+        h4.forp-detail-subtitle Included languages
+        p= site.includeLang
+        h4.forp-detail-subtitle Feature
+        p= site.feature
+        h4.forp-detail-subtitle Language
+        p= site.language

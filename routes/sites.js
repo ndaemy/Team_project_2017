@@ -1,7 +1,17 @@
 const express = require('express');
 const Site = require('../models/site');
+const catchErrors = require('../lib/async-error');
 
 const router = express.Router();
+
+function needAuth(req, res, next){
+  if(req.isAuthenticated()){
+    next();
+  } else{
+    req.flash('danger', 'Please signin first.');
+    res.redirect('/signin');
+  }
+}
 
 /* GET sites listing. */
 router.get('/', async (req, res, next) => {
@@ -26,7 +36,7 @@ router.get('/', async (req, res, next) => {
   res.render('sites/index', {sites: sites});
 });
 
-router.get('/new', (req, res, next) => {
+router.get('/new', needAuth, (req, res, next) => {
   res.render('sites/new', {site: {}});
 });
 

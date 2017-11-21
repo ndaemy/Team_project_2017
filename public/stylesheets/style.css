@@ -53,15 +53,25 @@
       margin: 0 16px;
       padding-top: 8px; } }
 
-.forp-content {
-  min-height: 800px; }
-
 .forp-footer {
   margin-top: 3em;
   position: relative; }
   @media screen and (max-width: 900px) {
     .forp-footer {
       font-size: .8em; } }
+
+.mdl-layout__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+
+.mdl-layout__content > *:not(.mdl-layout-spacer) {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none; }
 
 .article-image {
   height: auto;

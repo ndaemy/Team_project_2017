@@ -53,6 +53,9 @@
       margin: 0 16px;
       padding-top: 8px; } }
 
+.forp-content {
+  min-height: 800px; }
+
 .forp-footer {
   margin-top: 3em;
   position: relative; }

@@ -9,7 +9,8 @@ block content
         img.article-image(src='../images/contact-image.jpg')
       .mdl-card__supporting-text
         h4.forp-detail-subtitle Domain
-        p= site.domain
+        a(href= site.domain)
+          p= site.domain
         h4.forp-detail-subtitle Included languages
         p= site.includeLang
         h4.forp-detail-subtitle Feature

@@ -106,4 +106,22 @@
   margin-bottom: 8px;
   margin-top: 12px; }
 
+body {
+  font-size: 12px; }
+
+.main {
+  margin: 0 auto;
+  max-width: 320px; }
+
+.form-signin {
+  margin: 0 auto;
+  padding: 1em;
+  width: 300px; }
+  .form-signin .form-signin-heading {
+    font-weight: bold;
+    text-align: center; }
+  .form-signin .btn-mine {
+    background-color: #2196f3;
+    color: #fff; }
+
 /*# sourceMappingURL=style.css.map */

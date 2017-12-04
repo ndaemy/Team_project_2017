@@ -10,8 +10,10 @@ block navs
         a.mdl-navigation__link(href='/about') About
         a.mdl-navigation__link(href='/help') Help
         a.mdl-navigation__link(href='/contact') Contact
-        a.mdl-navigation__link(href='/signin') Signin
-        a.mdl-navigation__link(href='/signout') Signout
+        if (!currentUser)
+          a.mdl-navigation__link(href='/signin') Signin
+        else
+          a.mdl-navigation__link(href='/signout') Signout
   //- Drawer
   .forp-drawer.mdl-layout__drawer
     span.mdl-layout-title For P

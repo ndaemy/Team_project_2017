@@ -107,3 +107,30 @@
 .forp-large-textfield {
   width: 60em;
 }
+
+.forp-help-img {
+  display: none;
+  position: absolute;
+  z-index: 300;
+  max-width: 70%;
+  top: auto;
+  right: auto;
+}
+
+.forp-help-btn {
+  background: #FF4081;
+  color: #FFF;
+  margin: 0 1em;
+
+  &:hover {
+    background: #FF4081;
+    color: #FFF;
+  }
+
+}
+
+.help_img{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,8 +1,8 @@
 extends layout
   
 block content
+  img.forp-help-img(src='images/help_2.png')
   .main
-    
     form.form-signin(action='/signin', method='POST')
       h3.form-signin-heading Signin
       label.sr-only(for='email') Email address
@@ -28,3 +28,9 @@ block content
         | /
         |
         a(href='/reset-password') Reset Password
+        
+    .forp-fixed-right-bottom
+      button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
+        i.material-icons help_outline
+
+      

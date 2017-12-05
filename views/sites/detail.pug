@@ -1,7 +1,8 @@
 extends ../layout
 
 block content
-  .mdl-grid.forp-max-width
+  img.forp-help-img(src='../images/help_5.png')
+  .mdl-grid.forp-max-width    
     .mdl-cell.mdl-cell--12-col.mdl-card.mdl-shadow--4dp
       .mdl-card__title
         h2.mdl-card__title-text= site.name
@@ -17,3 +18,6 @@ block content
         p= site.feature
         h4.forp-detail-subtitle Language
         p= site.language
+  .forp-fixed-right-bottom
+    button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
+      i.material-icons help_outline

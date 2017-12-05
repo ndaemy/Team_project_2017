@@ -5,9 +5,13 @@ block content
     .mdl-grid
       .mdl-cell--12-col
         h1.main-title Sites for programming
+        img.forp-help-img(src='/images/help_4.png')
         .forp-fixed-right-bottom
           a.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored(href='/sites/new')
             i.material-icons add
+          button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
+            i.material-icons help_outline
+
         if sites.total > 0
           .mdl-typography--text-right Total #{sites.total} site(s)
     

@@ -45,6 +45,35 @@ router.get('/:id', async (req, res, next) => {
   res.render('sites/detail', {site: site});
 });
 
+router.get('/:id/edit', needAuth, async (req, res, next) => {
+  const site = await Site.findById(req.params.id);
+  res.render('sites/edit', {site: site});
+});
+
+router.post('/:id', async (req, res, next) => {
+  const site = await Site.findById(req.params.id);
+
+  if (!site) {
+    req.flash('danger', 'Not exist site');
+    return res.redirect('back');
+  }
+  site.title = req.body.title;
+  site.domain = req.body.domain;
+  site.includeLang = req.body.includeLang.toLowerCase().split(" ").map(e => e.trim());
+  site.language = req.body.language.toLowerCase().split(" ").map(e => e.trim());
+  site.feature = req.body.feature.toLowerCase().split(" ").map(e => e.trim());
+
+  await site.save();
+  req.flash('success', 'Successfully updated');
+  res.redirect('/sites');
+});
+
+router.delete('/:id', needAuth, async (req, res, next) => {
+  await Site.findOneAndRemove({_id: req.params.id});
+  req.flash('success', 'Successfully deleted');
+  res.redirect('/sites');
+});
+
 router.post('/', async (req, res, next) => {
   var site = new Site({
     name: req.body.name,

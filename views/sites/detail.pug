@@ -8,7 +8,7 @@ block content
         h2.mdl-card__title-text= site.name
       .mdl-card__media
         img.article-image(src='../images/contact-image.jpg')
-      .mdl-card__supporting-text
+      .mdl-card__supporting-text.w-100
         h4.forp-detail-subtitle Domain
         a(href= site.domain)
           p= site.domain
@@ -21,3 +21,19 @@ block content
   .forp-fixed-right-bottom
     button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
       i.material-icons help_outline
+
+  .forp-float-right
+
+    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(href=`/sites/${site.id}/edit`) Edit
+    | 
+    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.forp-button--delete(href='#', data-url=`/sites/${site.id}?_method=delete`) Delete
+
+  script.
+    $(function() {
+      $('.forp-button--delete').click(function() {
+        if (confirm('Are you sure to delete?')) {
+          location = $(this).data('url');
+        }
+        return false;
+      });
+    });

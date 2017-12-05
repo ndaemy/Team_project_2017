@@ -1,3 +1,15 @@
+.w-100 {
+  width: 100%;
+}
+
+.forp-float-left {
+  float: left;
+}
+
+.forp-float-right {
+  float: right;
+}
+
 .forp-header {
   overflow: visible;
 }
@@ -134,4 +146,13 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.forp-button--delete {
+  color: #fff;
+  background: #ff4081;
+
+  &:hover {
+    background-color: #ff4081;
+  }
 }

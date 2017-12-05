@@ -45,6 +45,17 @@ router.get('/:id', async (req, res, next) => {
   res.render('sites/detail', {site: site});
 });
 
+router.get('/:id/edit', needAuth, async (req, res, next) => {
+  const site = await Site.findById(req.params.id);
+  res.render('sites/edit', {site: site});
+});
+
+router.delete('/:id', needAuth, async (req, res, next) => {
+  await Site.findOneAndRemove({_id: req.params.id});
+  req.flash('success', 'Successfully deleted');
+  res.redirect('/sites');
+});
+
 router.post('/', async (req, res, next) => {
   var site = new Site({
     name: req.body.name,

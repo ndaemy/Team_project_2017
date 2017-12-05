@@ -1,3 +1,12 @@
+.w-100 {
+  width: 100%; }
+
+.forp-float-left {
+  float: left; }
+
+.forp-float-right {
+  float: right; }
+
 .forp-header {
   overflow: visible; }
 
@@ -87,6 +96,12 @@
 
 .forp-large-textfield {
   width: 60em; }
+
+.forp-button--delete {
+  color: #fff;
+  background: #ff4081; }
+  .forp-button--delete:hover {
+    background-color: #ff4081; }
 
 .main-title {
   color: #555;

@@ -94,7 +94,8 @@
   z-index: 300;
   max-width: 70%;
   top: auto;
-  right: auto; }
+  right: 15%;
+  border: 5px solid #FF4081; }
 
 .forp-help-btn {
   background: #FF4081;

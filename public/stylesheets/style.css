@@ -97,11 +97,34 @@
 .forp-large-textfield {
   width: 60em; }
 
+.forp-help-img {
+  display: none;
+  position: absolute;
+  z-index: 300;
+  max-width: 70%;
+  top: auto;
+  right: 15%;
+  border: 5px solid #FF4081; }
+
+.forp-help-btn {
+  background: #FF4081;
+  color: #FFF;
+  margin: 0 1em; }
+  .forp-help-btn:hover {
+    background: #FF4081;
+    color: #FFF; }
+
+.help_img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .forp-button--delete {
   color: #fff;
   background: #ff4081; }
-  .forp-button--delete:hover {
-    background-color: #ff4081; }
+  &:hover {
+    background-color: #ff4081;
+}
 
 .main-title {
   color: #555;
@@ -125,9 +148,9 @@
   color: #fff; }
 
 .forp-fixed-right-bottom {
-  bottom: 3rem;
+  bottom: 10rem;
   position: fixed;
-  right: 6rem;
+  right: 8rem;
   z-index: 300; }
 
 .forp-detail-subtitle {

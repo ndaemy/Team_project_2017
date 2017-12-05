@@ -1,7 +1,8 @@
 extends ../layout
 
 block content
-  .mdl-grid.forp-max-width
+  img.forp-help-img(src='../images/help_5.png')
+  .mdl-grid.forp-max-width    
     .mdl-cell.mdl-cell--12-col.mdl-card.mdl-shadow--4dp
       .mdl-card__title
         h2.mdl-card__title-text= site.name
@@ -17,12 +18,15 @@ block content
         p= site.feature
         h4.forp-detail-subtitle Language
         p= site.language
+  .forp-fixed-right-bottom
+    button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
+      i.material-icons help_outline
 
-        .forp-float-right
-          
-          a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(href=`/sites/${site.id}/edit`) Edit
-          | 
-          a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.forp-button--delete(href='#', data-url=`/sites/${site.id}?_method=delete`) Delete
+  .forp-float-right
+
+    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(href=`/sites/${site.id}/edit`) Edit
+    | 
+    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.forp-button--delete(href='#', data-url=`/sites/${site.id}?_method=delete`) Delete
 
   script.
     $(function() {

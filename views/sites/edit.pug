@@ -5,10 +5,10 @@ block content
     .mdl-cell--2-col
     .mdl-cell--8-col
       h1.main-title Edit a site
-      form(action='/sites', method='POST')
+      form(action=`/sites/${site.id}`, method='POST')
         input(type='hidden', name='_method', value='PUT')
         include _form
         | 
         |
-        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored Update
+        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(type='submit') Update
     .mdl-cell--2-col

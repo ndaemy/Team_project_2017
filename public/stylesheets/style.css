@@ -109,7 +109,7 @@
 .forp-help-btn {
   background: #FF4081;
   color: #FFF;
-  margin: 0 1em; }
+  margin: 0 .5em; }
   .forp-help-btn:hover {
     background: #FF4081;
     color: #FFF; }
@@ -122,9 +122,8 @@
 .forp-button--delete {
   color: #fff;
   background: #ff4081; }
-  &:hover {
-    background-color: #ff4081;
-}
+  .forp-button--delete:hover {
+    background-color: #ff4081; }
 
 .main-title {
   color: #555;
@@ -148,9 +147,9 @@
   color: #fff; }
 
 .forp-fixed-right-bottom {
-  bottom: 10rem;
+  bottom: 3rem;
   position: fixed;
-  right: 8rem;
+  right: 3.5rem;
   z-index: 300; }
 
 .forp-detail-subtitle {

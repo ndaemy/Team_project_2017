@@ -18,15 +18,16 @@ block content
         p= site.feature
         h4.forp-detail-subtitle Language
         p= site.language
+        .forp-float-right
+
+          a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(href=`/sites/${site.id}/edit`) Edit
+          | 
+          a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.forp-button--delete(href='#', data-url=`/sites/${site.id}?_method=delete`) Delete
+          
   .forp-fixed-right-bottom
     button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.forp-help-btn
       i.material-icons help_outline
 
-  .forp-float-right
-
-    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(href=`/sites/${site.id}/edit`) Edit
-    | 
-    a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.forp-button--delete(href='#', data-url=`/sites/${site.id}?_method=delete`) Delete
 
   script.
     $(function() {
